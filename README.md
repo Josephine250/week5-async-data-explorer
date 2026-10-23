@@ -49,3 +49,10 @@ const state = {
   activeModalItem: null, // Selected recipe object displayed in modal
   modalLoading: false    // Loading indicator state for single item modal fetch
 };
+screenshoot parts
+showing error 
+<img width="896" height="431" alt="image" src="https://github.com/user-attachments/assets/cb83f960-6e28-439a-a39e-38389831bd3e" />
+
+ showing loading 
+ <img width="880" height="435" alt="Screenshot 2026-10-23 163552" src="https://github.com/user-attachments/assets/a83bb1d8-5c2e-46af-8341-606856d878ea" />
+

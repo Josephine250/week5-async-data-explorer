@@ -9,7 +9,7 @@ export function render(state, handlers) {
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <h1 class="text-3xl font-bold">Recipe Explorer</h1>
-          <p class="text-amber-200 text-sm">Week 5 - Async Data Fetching</p>
+          
         </div>
         ${state.status === 'success' ? renderStatsBar(state) : ''}
       </div>

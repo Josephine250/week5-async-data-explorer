@@ -3,7 +3,7 @@ Recipe Explorer - Async Data Explorer Application
 Author: Josephine Niyompano  
 Course: Advanced Frontend Web Development (Week 5 Assignment)  
 API Endpoint: https://dummyjson.com/docs/recipes  
-Live Site:   
+Live Site:   https://week5-async-data-explorer-chi.vercel.app/
  
 
 

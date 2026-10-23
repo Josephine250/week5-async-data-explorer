@@ -224,6 +224,64 @@ function renderModal(state) {
     </dialog>
   `;
 }
+function renderWhyChooseUs() {
+  return `
+    <section class="my-12">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Why Cook With Us?</h2>
+        <p class="text-gray-500 text-sm mt-1">Everything you need to plan your daily meals effortlessly</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center">
+          <h3 class="font-bold text-gray-800 text-lg mb-2">Instant Search</h3>
+          <p class="text-gray-600 text-sm">Find recipes immediately by searching for any ingredient sitting in your pantry.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center">
+          <h3 class="font-bold text-gray-800 text-lg mb-2">Nutritional Info</h3>
+          <p class="text-gray-600 text-sm">Track your intake with precise calorie counts and serving sizes for every dish.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center">
+          <h3 class="font-bold text-gray-800 text-lg mb-2">Step-by-Step</h3>
+          <p class="text-gray-600 text-sm">Clear preparation instructions and complete ingredient checklists inside detailed modals.</p>
+        </div>
+      </div>
+    </section>
+  `;
+}
+function renderSubscribeSection() {
+  return `
+    <section class="bg-amber-700 text-white rounded-2xl p-8 md:p-12 my-12 shadow-lg text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-extrabold mb-3">Join Our Culinary Community</h2>
+        <p class="text-amber-100 text-sm md:text-base mb-8 max-w-xl mx-auto">
+          Get weekly hand-picked recipes, cooking tips, and seasonal meal plans delivered straight to your inbox.
+        </p>
+
+        <form onsubmit="event.preventDefault();" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-10">
+          <input 
+            type="email" 
+            placeholder="Enter your email address..." 
+            class="flex-1 px-4 py-3 rounded-lg text-gray-900 text-sm focus:outline-none"
+          />
+          <button 
+            type="button" 
+            class="bg-amber-900 hover:bg-amber-950 text-white font-semibold px-6 py-3 rounded-lg text-sm transition"
+          >
+            Subscribe
+          </button>
+        </form>
+
+        <div class="border-t border-amber-600/60 pt-6 flex flex-wrap justify-center gap-6 text-amber-100 text-xs md:text-sm">
+          <span>Email: support@recipeexplorer.com</span>
+          <span>Location: Kigali, Rwanda</span>
+        </div>
+      </div>
+    </section>
+  `;
+}
 
 function bindEvents(state, handlers) {
   const searchInput = document.getElementById('search-input');

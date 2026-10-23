@@ -9,14 +9,14 @@ const app = document.getElementById('app');
  */
 export function render(state, handlers) {
   app.innerHTML = `
-    <header class="bg-amber-600 text-white p-6 shadow-md">
+    <header class="bg-amber-50 text-white p-6 shadow-md">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <h1 class="text-3xl font-bold">Recipe Explorer</h1>
           
         </div>
-        ${state.status === 'success' ? renderStatsBar(state) : ''}
-      </div>
+          ${state.status === 'success' ? renderStatsBar(state) : ''}
+        </div>
     </header>
 
     <main class="max-w-6xl mx-auto p-6">
@@ -30,6 +30,28 @@ export function render(state, handlers) {
   `;
 
   bindEvents(state, handlers);
+}
+function renderHeroSection() {
+  return `
+    <section class="bg-gradient-to-r from-amber-600 to-amber-800 text-white rounded-2xl p-8 md:p-12 mb-8 shadow-md">
+      <div class="max-w-3xl">
+        <span class="bg-amber-900/50 text-amber-200 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+          Discover and Cook
+        </span>
+        <h2 class="text-3xl md:text-5xl font-extrabold mt-3 mb-4 leading-tight">
+          Explore Delicious Recipes From Around the World
+        </h2>
+        <p class="text-amber-100 text-base md:text-lg mb-6 leading-relaxed">
+          Browse through our curated collection of quick meals, traditional cuisines, and healthy dining ideas. Search by ingredients or filter by cooking time in seconds.
+        </p>
+        <div class="flex flex-wrap gap-3 text-xs md:text-sm font-medium">
+          <span class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">50+ Tested Recipes</span>
+          <span class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">Fast Prep Times</span>
+          <span class="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20">Calorie Tracking</span>
+        </div>
+      </div>
+    </section>
+  `;
 }
 
 function renderStatsBar(state) {
@@ -230,3 +252,4 @@ function bindEvents(state, handlers) {
     dialog.addEventListener('close', handlers.onCloseModal);
   }
 }
+
